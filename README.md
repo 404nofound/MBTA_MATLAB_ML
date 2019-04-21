@@ -7,7 +7,8 @@ Two kind prediction: `Whole Day prediction` and `Time Period Prediction`.
 ## Description
 
 * Data Pre-Processing.ipynb: Generating input and output csv files
-* MatLab folder: Running in MATLAB to do prediction
+
+* MBTA_MATLAB Folder: Running in MATLAB to do prediction
 
 ## Tools
 
