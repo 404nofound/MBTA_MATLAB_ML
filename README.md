@@ -22,7 +22,8 @@ Two kind prediction: `Whole Day prediction` and `Time Period Prediction`.
 
 ## Data
 
-* MBTA historical passenger flow data, available in [MBTA](http://mbtabackontrack.com/performance/index.html#/download).
+* MBTA historical passenger flow data, available in 
+<a href="http://mbtabackontrack.com/performance/index.html#/download" target="_blank">MBTA</a>.
 
 * Weather (Rain, Snow, Temperature) historical data, has been uploaded in current folder.
 
