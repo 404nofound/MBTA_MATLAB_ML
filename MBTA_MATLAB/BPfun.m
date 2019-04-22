@@ -14,7 +14,7 @@ outputnum=size(T,1);          % Output layer neuron number 1
 %% Build new BP Neural Network
 net = feedforwardnet(hiddennum, 'traincgb');
 net = configure(net,P,T);
-net.inputs{1}.size=6;
+net.inputs{1}.size=23;
 net.layers{1}.transferFcn = 'logsig';
 %net.layers{1}.size=9;
 %net.layers{2}.size=1;

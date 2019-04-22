@@ -2,12 +2,15 @@ clear
 clc
 
 input = csvread('input.csv');
-output = csvread('output_hour5.csv');
+%output = csvread('output_day.csv');
+output = csvread('output_hour.csv');
 
-P = input(:,1:1847)
-P_test = input(:,1848:end);
+% Last 100 piece data as testing data set
+P = input(:,1:1833)
+P_test = input(:,1834:end);
 
-T = output(2,1:1847);
-T_test = output(2,1848:end);
+T = output(:,1:1833);
+T_test = output(:,1834:end);
 
-save('data1.mat', 'P', 'P_test', 'T', 'T_test');
+%save('data.mat', 'P', 'P_test', 'T', 'T_test');
+save('data_hour.mat', 'P', 'P_test', 'T', 'T_test');

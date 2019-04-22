@@ -3,11 +3,12 @@ clear all
 close all
 %% Load Neural Network's training data, every column's data is a input sample
 % Input data marks as P, Output data marks as T
+% When predict time period, change to data_hour.mat
 load data
 % Hidden neuron number
-hiddennum=13;
+hiddennum=47;
 % Input vector's range after normalization
-threshold=[0 1;0 1;0 1;0 1;0 1;0 1];
+threshold=[0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1;0 1];
 inputnum=size(P,1);        % Input layer neuron number: 5
 outputnum=size(T,1);      % Output layer neuron number: 1
 w1num=inputnum*hiddennum;        % Weight number from input layer to hidden layer
@@ -16,9 +17,9 @@ N=w1num+hiddennum+w2num+outputnum;      % Variable number to be optimized
 
 %% Define Genetic Algorithm parameters
 NIND=100;              % Population Size
-MAXGEN=100;      % Max Generation Epoch
+MAXGEN=120;      % Max Generation Epoch
 PRECI=10;             % Variable's number of binary digits
-GGAP=0.95;          % Generation Gap
+GGAP=0.9;          % Generation Gap0.95
 px=0.6;                    % Crossover Probability0.7
 pm=0.01;                 % Mutation Probability0.01
 trace=zeros(N+1,MAXGEN);                     % Initialize optimal result matrix 
@@ -59,5 +60,7 @@ bestX=trace(1:end-1,end);
 bestErr=trace(end,end);
 fprintf(['Optimal initial weight and threshold:\nX=',num2str(bestX'),'\nMinimum Error=',num2str(bestErr),'\n'])
 %% Compare Result
-%callbackfun
+% callback function for hour prediction
+%callbackfun_hour
+% callback function for day prediction
 callbackfun_day
